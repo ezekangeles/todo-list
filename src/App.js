@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Add from "./components/Add";
+import { Context } from "./config/context";
+import { useContext } from "react";
+import List from "./components/List";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="bg-gradient-to-r from-blue-500 to-blue-600 w-full h-screen flex  justify-center overflow-hidden">
+          <div className="w-full max-w-[500px] h-screen bg-slate-200 rounded-md  relative">
+            <Add />
+            <List />
+          </div>
+        </div>
     </div>
   );
 }
